@@ -1,4 +1,4 @@
-/* stylelint-disable-next-line max-classes-per-file */
+/* eslint max-classes-per-file: ["error", 2] */
 class Data {
   static getLocalStorage() {
     let leaderboard;
