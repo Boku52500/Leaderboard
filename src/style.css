@@ -1,7 +1,62 @@
-.hello {
-  color: blue;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P'; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
+  font-weight: 600;
+  list-style-type: none;
 }
 
-body {
-  background-color: bisque;
+.titleMain h1 {
+  font-size: 55px;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.main-section {
+  display: flex;
+  gap: 20%;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.refreshDiv {
+  display: flex;
+  gap: 15px;
+}
+
+.buttons {
+  background: none;
+  font-size: 18px;
+  height: 30px;
+  box-shadow: black 2px 2px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input {
+  border: black solid;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+table {
+  border: 2px solid black;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+tr {
+  display: flex;
+  gap: 10px;
+  padding: 7px 10px;
+}
+
+tr:nth-child(odd) {
+  background-color: #e4e4e4;
 }
