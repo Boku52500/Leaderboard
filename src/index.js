@@ -1,15 +1,24 @@
-import _ from 'lodash';
-
 import './style.css';
 
-function component() {
-  const element = document.createElement('div');
+import Score from '../modules/score.js';
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
+import Data from '../modules/storage.js';
 
-  return element;
-}
+import Actions from '../modules/actions.js';
 
-document.body.appendChild(component());
+document.addEventListener('DOMContentLoaded', Actions.display);
+
+document.querySelector('#add').addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const name = document.querySelector('#name').value;
+  const score = document.querySelector('#score').value;
+  const newScore = new Score(name, score);
+  Actions.addScore(newScore);
+  Data.setLocalStorage(newScore);
+  Actions.clearValues();
+});
+
+document.querySelector('#refresh').addEventListener('click', () => {
+  Actions.refreshAll();
+});

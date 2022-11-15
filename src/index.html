@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wbpack Exercise</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>Leaderboard</title>
 </head>
+
 <body>
-    <h1>Hello webpack!</h1>
+  <section class="titleMain" id="titleSection">
+    <h1>Leaderboard</h1>
+  </section>
+  <section class="main-section" id="main">
+    <div id="newScores">
+      <div class="refreshDiv" id="refreshDiv">
+        <h2>Recent scores</h2>
+        <button class="buttons" id="refresh">Refresh</button>
+      </div>
+      <table>
+        <tbody id="board-list"></tbody>
+      </table>
+    </div>
+
+
+    <form id="leader-board">
+      <h1>Add your score</h1>
+      <input id="name" type="text" placeholder="Your Name" />
+      <input id="score" type="text" placeholder="Your Score" />
+      <button class="buttons" id="add">Submit</button>
+    </form>
+
+  </section>
 </body>
+
 </html>
