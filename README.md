@@ -2,7 +2,7 @@
 
 # To-do list project.
 
-> This is the javaScript project for Microverse. In this project, I built a simple to-do list useing HTML, CSS, javaScript and WebPack.
+> This is the javaScript project for Microverse. In this project, I built a leaderboard page useing HTML, CSS, javaScript, APIS and WebPack.
 
 ## Built With 
 
