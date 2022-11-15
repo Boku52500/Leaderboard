@@ -1,3 +1,4 @@
+/* stylelint-disable-next-line max-classes-per-file */
 class Data {
   static getLocalStorage() {
     let leaderboard;

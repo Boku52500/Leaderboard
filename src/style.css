@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Press Start 2P';
+  font-family: 'Press Start 2P'; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
   font-weight: 600;
   list-style-type: none;
 }
