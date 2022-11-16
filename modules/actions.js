@@ -1,47 +1,46 @@
-/* eslint max-classes-per-file: ["error", 2] */
-class Data {
-  static getLocalStorage() {
-    let leaderboard;
-    if (localStorage.getItem('leaderboard') === null) {
-      leaderboard = [];
-    } else {
-      leaderboard = JSON.parse(localStorage.getItem('leaderboard'));
-    }
-    return leaderboard;
+const api = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/:5UJ3uAfYRXbJ57tyDjFq/scores';
+
+const newScore = () => {
+  const name = document.querySelector('#name').value
+  const score = document.querySelector('#score').value
+
+  fetch(api, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      user: name,
+      score,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+};
+
+const deleteVals = () => {
+  document.querySelector('#name').value = '';
+  document.querySelector('#score').value = '';
+};
+
+const refreshVals = () => {
+  async function allScore() {
+    const boardList = document.querySelector('#board-list');
+    boardList.innerHTML = '';
+    const response = await fetch(api);
+    const data = await response.json();
+    data.result.forEach((newScore) => {
+      boardList.innerHTML += `
+      <li>${newScore.user}: ${newScore.score}</li>
+      `;
+    });
   }
-}
+  allScore();
+};
 
-export default class Actions {
-  static display() {
-    const scores = Data.getLocalStorage();
-
-    scores.forEach((newScore) => Actions.addScore(newScore));
-  }
-
-  static addScore(newScore) {
-    if (newScore.name !== '') {
-      const list = document.querySelector('#board-list');
-      const newRow = document.createElement('tr');
-
-      newRow.innerHTML = `
-        <li>${newScore.name}:</li>
-        <li>${newScore.score}</li>
-        `;
-      list.appendChild(newRow);
-    }
-  }
-
-  static clearValues() {
-    document.querySelector('#name').value = '';
-    document.querySelector('#score').value = '';
-  }
-
-  static refreshAll() {
-    const scores = Data.getLocalStorage();
-    const list = document.querySelector('#board-list');
-    list.parentElement.remove();
-    scores.splice(0, scores.length);
-    localStorage.setItem('leaderboard', JSON.stringify(scores));
-    window.location.reload();
-  }
-}
+export { newScore, deleteVals, refreshVals };
