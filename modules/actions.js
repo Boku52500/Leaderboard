@@ -1,8 +1,8 @@
 const api = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/:5UJ3uAfYRXbJ57tyDjFq/scores';
 
 const newScore = () => {
-  const name = document.querySelector('#name').value
-  const score = document.querySelector('#score').value
+  const name = document.querySelector('#name').value;
+  const score = document.querySelector('#score').value;
 
   fetch(api, {
     method: 'POST',
