@@ -9,7 +9,7 @@ document.querySelector('#add').addEventListener('click', (e) => {
 
   newScore();
   deleteVals();
-})
+});
 
 document.querySelector('#refresh').addEventListener('click', () => {
   refreshVals();
