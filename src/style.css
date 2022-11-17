@@ -13,7 +13,10 @@ body {
   height: 100vh;
 }
 
-
+form h1 {
+  color: blue;
+  text-shadow: black 5px 5px;
+}
 
 .titleMain h1 {
   font-size: 55px;
@@ -52,11 +55,6 @@ form {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-form h1 {
-  color: blue;
-  text-shadow: black 5px 5px;
 }
 
 input {
