@@ -7,10 +7,23 @@
   list-style-type: none;
 }
 
+body {
+  background-image: url(https://www.gifcen.com/wp-content/uploads/2022/03/attack-on-titan-gif-4.gif);
+  background-size: cover;
+  height: 100vh;
+}
+
+form h1 {
+  color: blue;
+  text-shadow: black 5px 5px;
+}
+
 .titleMain h1 {
   font-size: 55px;
   margin-left: 20px;
   margin-top: 30px;
+  color: yellow;
+  text-shadow: black 5px 5px;
 }
 
 .main-section {
@@ -25,10 +38,16 @@
   gap: 15px;
 }
 
+.refreshDiv h2 {
+  color: blue;
+  text-shadow: black 5px 5px;
+}
+
 .buttons {
-  background: none;
   font-size: 18px;
   height: 30px;
+  color: black;
+  background-color: red;
   box-shadow: black 2px 2px;
 }
 
@@ -58,5 +77,9 @@ li {
 }
 
 li:nth-child(odd) {
-  background-color: #e4e4e4;
+  background-color: red;
+}
+
+li:nth-child(even) {
+  background-color: blue;
 }
