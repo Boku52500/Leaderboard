@@ -13,7 +13,7 @@
 
 ## Live Demo
 
-You can check out the live version of my project with this [link.](https://boku52500.github.io/leaderboard/)
+You can check out the live version of my project with this [link.](https://boku52500.github.io/Leaderboard/)
 
 ## Getting Started
 
