@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# To-do list project.
+# Leaderboard project.
 
-> This is the javaScript project for Microverse. In this project, I built a leaderboard page useing HTML, CSS, javaScript, APIS and WebPack.
+> This is a Leaderboard page, which displays names and scores of users with API. I built it with HTML, CSS, javaScript, API and WebPack.
 
 ## Built With 
 
